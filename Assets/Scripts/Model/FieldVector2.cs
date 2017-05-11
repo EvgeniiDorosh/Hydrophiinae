@@ -1,4 +1,7 @@
-﻿public struct FieldVector2
+﻿using System;
+
+[Serializable]
+public struct FieldVector2
 {
 	public int x;
 	public int y;
@@ -67,5 +70,10 @@
 		hash = hash * 31 + x.GetHashCode();
 		hash = hash * 31 + y.GetHashCode();
 		return hash;
+	}
+
+	public override string ToString ()
+	{
+		return string.Format ("[FieldVector2: {0}:{1}]", x, y);
 	}
 }

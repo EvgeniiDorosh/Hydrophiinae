@@ -11,6 +11,10 @@ public class UILevelButton : MonoBehaviour
 	Text levelText;
 	[SerializeField]
 	Text scoreText;
+	[SerializeField]
+	Color finishedColor;
+	[SerializeField]
+	Color unfinishedColor;
 
 	Image image;
 
@@ -20,7 +24,9 @@ public class UILevelButton : MonoBehaviour
 		scoreText.text = score.ToString();
 		scoreText.enabled = score > 0;
 
-		image.color = score > 0 ? Color.yellow : Color.grey;
+		image.color = score > 0 ? finishedColor : unfinishedColor;
+		scoreText.color = score > 0 ? unfinishedColor : finishedColor;
+		levelText.color = score > 0 ? unfinishedColor : finishedColor;
 	}
 
 	public void LoadLevel()

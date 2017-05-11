@@ -6,16 +6,11 @@ public class Preloader : MonoBehaviour
 {
 	LineRenderer lineRenderer;
 
-
-	[SerializeField]
-	GameObject logo;
-
 	IEnumerator Start () 
 	{
-		logo.SetActive (false);
 		lineRenderer = GetComponent<LineRenderer> ();
 		lineRenderer.numPositions = 5;
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(0.5f);
 		float size = 4;
 		float diff = -1f;
 		while (size > 0) 
@@ -23,8 +18,7 @@ public class Preloader : MonoBehaviour
 			yield return StartCoroutine (ShowSquare (size, 0.5f));
 			size += diff;
 		}
-		logo.SetActive (true);
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(1f);
 		StopAllCoroutines ();
 		SceneManager.LoadScene (1);
 	}

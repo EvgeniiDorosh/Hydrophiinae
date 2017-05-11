@@ -6,8 +6,6 @@ public class GameController : MonoBehaviour
 	static GameController instance = null;
 	static int currentLevel = -1;
 
-	const int maxLevel = 20;
-
 	public static GameController Instance 
 	{
 		get { return instance;}
@@ -20,7 +18,7 @@ public class GameController : MonoBehaviour
 
 	public static void LoadLevel(int level)
 	{
-		if (level <= maxLevel)
+		if (level <= Settings.maxLevel)
 		{
 			currentLevel = level;
 			SceneManager.LoadScene ((int)GameScene.Level);

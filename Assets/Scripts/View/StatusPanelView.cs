@@ -5,25 +5,28 @@ using System.Collections;
 public class StatusPanelView : MonoBehaviour
 {
 	[SerializeField]
-	Text livesText;
+	Text levelText;
 	[SerializeField]
 	Text scoreText;
 	[SerializeField]
 	Text bestScoreText;
+	[SerializeField]
+	Text picksText;
 
 	void Awake ()
 	{
 		bestScoreText.text = PrefsManager.GetScore (GameController.CurrentLevel).ToString();
-	}
-
-	public int Lives
-	{
-		set { livesText.text = value.ToString (); }
+		levelText.text = GameController.CurrentLevel.ToString ();
 	}
 
 	public int Score
 	{
 		set { scoreText.text = value.ToString (); }
+	}
+
+	public int PicksForOver
+	{
+		set { picksText.text = value.ToString(); }
 	}
 }
 

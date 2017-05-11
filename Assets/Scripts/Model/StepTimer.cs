@@ -15,7 +15,7 @@ public class StepTimer : MonoBehaviour
 		get { return duration;}
 		set 
 		{ 
-			duration = Mathf.Clamp(value, 0.08f, 5f);
+			duration = Mathf.Clamp(value, 0, value);
 			waiting = new WaitForSeconds (duration);
 		}
 	}

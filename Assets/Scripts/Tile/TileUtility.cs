@@ -3,18 +3,6 @@ using System.Collections.Generic;
 
 public static class TileUtility
 {
-	static Dictionary<TileType, Color32> colors;
-
-	static TileUtility()
-	{
-		InitTileColors ();
-	}
-
-	public static Color GetColor(TileType type)
-	{
-		return colors [type]; 
-	}
-
 	public static TileType GetType(char key)
 	{
 		TileType result = TileType.Empty;
@@ -49,14 +37,5 @@ public static class TileUtility
 		}
 
 		return result;
-	}
-
-	static void InitTileColors()
-	{
-		colors = new Dictionary<TileType, Color32>();
-		colors [TileType.Block] = new Color32 (225, 108, 23, 255);
-		colors [TileType.Empty] = new Color32 (125, 0, 90, 255);
-		colors [TileType.Body] = new Color32 (114, 242, 30, 255);
-		colors [TileType.Points] = new Color32 (255, 255, 255, 255);
 	}
 }

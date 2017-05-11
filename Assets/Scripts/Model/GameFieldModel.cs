@@ -1,16 +1,12 @@
-﻿using System.IO;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class GameFieldModel 
 {
 	Tile[][] tiles;
 
-	public GameFieldModel (int level)
+	public GameFieldModel (string[] rows)
 	{
-		string filePath = Path.Combine(Application.streamingAssetsPath, string.Format("Level_{0}.txt", level));
-
-		string[] rows = File.ReadAllLines(filePath);
 		tiles = LevelParser.Parse (rows);
 	}
 

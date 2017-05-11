@@ -45,7 +45,7 @@ public class GameFieldView : MonoBehaviour
 				cloneTile = Instantiate (tilePrefab, transform) as GameObject;
 				cloneTile.transform.localScale = Vector3.one;
 				image = cloneTile.GetComponent<Image> ();
-				image.color = TileUtility.GetColor (tiles [x] [y].type);
+				image.sprite = TileViewHolder.GetTileSprite (tiles [x] [y].type);
 				images [x] [y] = image;
 			}
 		}
@@ -54,6 +54,6 @@ public class GameFieldView : MonoBehaviour
 	public void SetTiles(List<Tile> tiles)
 	{
 		foreach (Tile tile in tiles) 
-			images [tile.x] [tile.y].color = TileUtility.GetColor (tile.type);
+			images [tile.x] [tile.y].sprite = TileViewHolder.GetTileSprite (tile.type);
 	}
 }

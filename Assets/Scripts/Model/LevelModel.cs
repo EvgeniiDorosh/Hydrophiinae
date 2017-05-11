@@ -11,6 +11,7 @@ public class LevelModel
 	int picksForOver = 0;
 	int multiplier = 1;
 
+	public event EventHandler PickedPointsChangedHandler;
 	public event EventHandler ScoreChangedHandler;
 	public event EventHandler LivesChangedHandler;
 
@@ -53,12 +54,12 @@ public class LevelModel
 		set 
 		{ 
 			pickedPoints = Mathf.Clamp (value, 0, value);
+			if (PickedPointsChangedHandler != null)
+				PickedPointsChangedHandler (this, null);
+
 			if (pickedPoints >= picksForOver)
-			{
 				if (LevelOver != null)
 					LevelOver (this, null);
-			}
-
 		}
 	}
 

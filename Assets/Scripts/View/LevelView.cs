@@ -27,12 +27,16 @@ public class LevelView : MonoBehaviour
 	{
 		gamePaused = value;
 		Time.timeScale = value ? 0 : 1;
-		quitLevelPopup.SetActive (value);
 	}
 
 	public void RestartLevel()
 	{
 		GameController.LoadLevel (GameController.CurrentLevel);
+	}
+
+	public void ShowQuitPopup(bool value)
+	{
+		quitLevelPopup.SetActive (value);
 	}
 
 	public void LevelLost()
@@ -46,6 +50,7 @@ public class LevelView : MonoBehaviour
 	{
 		LevelText.text = string.Format ("Level {0}", GameController.CurrentLevel);
 		audioSource = GetComponent<AudioSource> ();
+		PauseGame (true);
 	}
 
 	void Update()
@@ -53,6 +58,7 @@ public class LevelView : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.Escape))
 		{
 			PauseGame (!gamePaused);
+			ShowQuitPopup (!quitLevelPopup.activeSelf);
 		}
 	}	 
 }

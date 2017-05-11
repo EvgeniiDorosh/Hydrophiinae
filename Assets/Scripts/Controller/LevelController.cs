@@ -33,10 +33,11 @@ public class LevelController
 		levelModel.LevelOver += OnLevelOver;
 		levelModel.Lives = 1;
 		levelModel.PlayerScore = 0;
-		levelModel.PicksForOver = 10 + (int)Mathf.Log(level);
+		levelModel.PicksForOver = Settings.PicksForOver(level);
+		levelModel.PickedPoints = 0;
 
 		timer.Ticked += OnTicked;
-		timer.Duration = 1f / (2 * level);
+		timer.Duration = Settings.Duration(level);
 	}
 
 	void OnTicked(object sender, EventArgs e)

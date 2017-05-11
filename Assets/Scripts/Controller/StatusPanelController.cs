@@ -11,7 +11,7 @@ public class StatusPanelController
 		this.statusView = statusView;
 
 		levelModel.ScoreChangedHandler += UpdateScore;
-		levelModel.LivesChangedHandler += UpdateLives;
+		levelModel.PickedPointsChangedHandler += UpdatePicks;
 	}
 
 	void UpdateScore(object sender, EventArgs e)
@@ -19,9 +19,9 @@ public class StatusPanelController
 		statusView.Score = levelModel.PlayerScore;
 	}
 
-	void UpdateLives(object sender, EventArgs e)
+	void UpdatePicks(object sender, EventArgs e)
 	{
-		statusView.Lives = levelModel.Lives;
+		statusView.PicksForOver = levelModel.PicksForOver - levelModel.PickedPoints;
 	}
 }
 

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class Initializer : MonoBehaviour
@@ -12,11 +14,32 @@ public class Initializer : MonoBehaviour
 	[SerializeField]
 	GameObject statusPanel;
 
-	void Start () 
+	IEnumerator Start () 
 	{
-		GameFieldModel fieldModel = new GameFieldModel (GameController.CurrentLevel);
+		string filePath = Path.Combine(Application.streamingAssetsPath, string.Format("Level_{0}.txt", GameController.CurrentLevel));
+		string result;
+
+		if (filePath.Contains ("://"))
+		{
+			WWW www = new WWW (filePath);
+			yield return www;
+			result = www.text;
+		}
+		else
+		{
+			result = File.ReadAllText (filePath);
+		}
+
+		string[] rows = Regex.Split(result, "\r\n|\r|\n");
+
+		InitLevel (rows);
+	}
+
+	void InitLevel(string[] rows)
+	{
+		GameFieldModel fieldModel = new GameFieldModel (rows);
 		PlayerModel playerModel = new PlayerModel (new FieldBounds (fieldModel.Width, fieldModel.Height), 
-													TileUtility.GetTiles (TileType.Body, fieldModel.Tiles));
+			TileUtility.GetTiles (TileType.Body, fieldModel.Tiles));
 
 		GameFieldView fieldView = gameField.GetComponent<GameFieldView> ();
 		Player playerView = player.GetComponent<Player> ();

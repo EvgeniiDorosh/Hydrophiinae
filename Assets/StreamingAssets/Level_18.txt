@@ -1,34 +1,22 @@
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-B                                            B                                                     B
-B                                            B                                                     B
-B                                            B                                                     B
-B                                            B                                                     B
-B                                            B                                                     B
-B                                            B                                                     B
-B                                            B                                                     B
-B                                            B                                                     B
-B                                            BBBBBB                                                B
-B                                                                                                  B
-B                                                                                                  B
-B                                                                                                  B
-B                                                                                                  B
-B                                                                                                  B
-B                                                                                                  B
-B                                                                                                  B
-B                     BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB                                               B
-B                     B                            B                                               B
-B                     B                            B                                               B
-B                     B                            B                                               B
-B                     B                            B                                               B
-B                     B                SS          B                                               B
-B                     B                                                                            B
-B                     B                                                                            B
-B                     BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB                                               B
-B                                                                                                  B
-B                                                                                                  B
-B                                                                                                  B
-B                                                                                                  B
-B                                                                                                  B
-B                                                                                                  B
-B                                                                                                  B
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++
+++++BBBB++++BBBB++++BBBB++++BBBB++++BBBB++++
+++++BBBB++++BBBB++++BBBB++++BBBB++++BBBB++++
+++++++++++++++++++++++++++++++++++++++++++++
++++++++++SS+++++++++++++++++++++++++++++++++
+++++BBBB++++BBBB++++BBBB++++BBBB++++BBBB++++
+++++BBBB++++BBBB++++BBBB++++BBBB++++BBBB++++
+++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++
+++++BBBB++++BBBB++++BBBB++++BBBB++++BBBB++++
+++++BBBB++++BBBB++++BBBB++++BBBB++++BBBB++++
+++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++
+++++BBBB++++BBBB++++BBBB++++BBBB++++BBBB++++
+++++BBBB++++BBBB++++BBBB++++BBBB++++BBBB++++
+++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++
+++++BBBB++++BBBB++++BBBB++++BBBB++++BBBB++++
+++++BBBB++++BBBB++++BBBB++++BBBB++++BBBB++++
+++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++
